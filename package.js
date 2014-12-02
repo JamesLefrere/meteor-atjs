@@ -1,17 +1,12 @@
 Package.describe({
-  name: 'jameslefrere:atjs',
-  summary: ' /* Fill me in! */ ',
-  version: '1.0.0',
-  git: ' /* Fill me in! */ '
+  name: "jameslefrere:atjs",
+  summary: "Meteor package for At.js",
+  version: "0.0.1",
+  git: "https://github.com/JamesLefrere/meteor-atjs"
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.0');
-  api.addFiles('jameslefrere:atjs.js');
-});
-
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('jameslefrere:atjs');
-  api.addFiles('jameslefrere:atjs-tests.js');
+  api.versionsFrom("1.0");
+  api.use("jquery", "client")
+  api.addFiles(["At.js/dist/css/jquery.atwho.css", "At.js/dist/js/jquery.atwho.js"], "client");
 });
